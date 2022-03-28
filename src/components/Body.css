@@ -2,3 +2,7 @@
    height: calc(100vh - 100px);
    overflow-y: scroll;
 }
+
+.bp4-running-text h3 {
+    margin-top: 0px;
+}
