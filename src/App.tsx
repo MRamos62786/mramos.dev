@@ -25,7 +25,7 @@ export default class App extends Component {
             state={this.state}
           />
           <Body />
-          <Footer />
+          <Footer state={this.state} />
         </div>
       </ResizeSensor>
     )
