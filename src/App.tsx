@@ -1,67 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+
+import type { State } from './interfaces';
+
 import './App.css';
-import { Spinner, Navbar, Alignment, Button } from "@blueprintjs/core";
+import { Component } from 'react'
+import { Header, Body, Footer } from './components';
+import { getTheme, setTheme, isDarkTheme } from './utilities';
 
-// using JSX:
-const mySpinner = <Spinner intent="primary" />;
+import { IResizeEntry, ResizeSensor } from "@blueprintjs/core";
 
-// I'm a full stack developer who enjoys advocating for other developers.
-// Send me an email - email@mramos.dev
-// https://www.linkedin.com/in/marco-ramos-dev
-// https://github.com/mramos-dev
+export default class App extends Component {
+  public state: State = { themeName: getTheme(), viewport: { height: 0, width: 0 }, menuOpen: false };
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar>
-        <Navbar.Group align={Alignment.LEFT}>
-          <Navbar.Heading>Marco Ramos</Navbar.Heading>
-          <Navbar.Divider />
-          <Button className="bp4-minimal" icon="home" text="Home" />
-          <Button className="bp4-minimal" icon="document" text="Files" />
-        </Navbar.Group>
-      </Navbar>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        {mySpinner}
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-        <p>Hey</p>
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <ResizeSensor onResize={this.handleResize}>
+        <div className={`${this.state.themeName} Viewport`}>
+          <div className={isDarkTheme(this.state.themeName) ? 'DarkBackground' : 'LightBackground'} />
+          <Header
+            useDarkTheme={isDarkTheme(this.state.themeName)}
+            onToggleDark={this.handleToggleDark}
+            onToggleMenu={this.handleToggleMenu}
+            state={this.state}
+          />
+          <Body />
+          <Footer />
+        </div>
+      </ResizeSensor>
+    )
+  }
+
+  private handleResize = (entries: IResizeEntry[]) => {
+    const entry = entries[0];
+    const height = entry.contentRect.height;
+    const width = entry.contentRect.width;
+    this.setState({ viewport: { height, width } });
+  }
+
+  private handleToggleDark = (useDark: boolean) => {
+    const nextThemeName = setTheme(useDark);
+    this.setState({ themeName: nextThemeName });
+  };
+
+  private handleToggleMenu = (openMenu: boolean) => {
+    this.setState({ menuOpen: openMenu });
+  };
 }
-
-export default App;
