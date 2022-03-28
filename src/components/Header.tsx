@@ -16,7 +16,12 @@ export const Header = ({ useDarkTheme, onToggleDark, onToggleMenu, state }: {
                     <Navbar.Heading>Marco Ramos</Navbar.Heading>
                     <Navbar.Divider />
                     {state.viewport.width >= 370 && <Button className="bp4-minimal" icon="home" text="Home" />}
-                    {state.viewport.width >= 370 && <Button className="bp4-minimal" icon="document" text="Resume" />}
+                    {state.viewport.width >= 370 && <AnchorButton
+                        className="bp4-minimal"
+                        icon="document"
+                        text="Resume"
+                        href="resume.pdf"
+                        download />}
                 </Navbar.Group>
                 <Navbar.Group align={Alignment.RIGHT}>
                     {state.viewport.width >= 430 && <AnchorButton

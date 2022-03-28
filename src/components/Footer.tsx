@@ -7,7 +7,7 @@ export const Footer = () => {
         <footer >
             <Navbar >
                 <Navbar.Group align={Alignment.LEFT}>
-                    <Navbar.Heading>{new Date().getFullYear()}</Navbar.Heading>
+                    <Navbar.Heading>Support Ukraine 🇺🇦 </Navbar.Heading>
                 </Navbar.Group>
                 <Navbar.Group align={Alignment.RIGHT}>
                     <AnchorButton

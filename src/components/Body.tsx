@@ -1,330 +1,52 @@
 import './Body.css';
-import { Card, Elevation } from "@blueprintjs/core";
+import gcpCloudDev from '../img/gcp-cloud-dev.png'
 
-const mySkill = (props: { header: string, content: string }) => (
-  <Card elevation={Elevation.TWO}>
-    <h5><a href="#/">{props.header}</a></h5>
-    <p>{props.content}</p>
-  </Card>
-);
+import { Card, Elevation } from "@blueprintjs/core";
 
 export const Body = () => {
   return (
     <main >
       <Card className='Body' interactive={true} elevation={Elevation.ZERO}>
+        <div className="bp4-running-text .modifier">
+          <h3>Lifelong Learner with Passion & Integrity</h3>
+          <p>
+            I'm a passionate software engineer with professional integrity who
+            is always looking for opportunities to advance his career. I'm also a
+            lifelong learner, expert in Node.js and RESTful APIs, and has been
+            part of many successful agile development teams in many roles
+            including individual contributor, scrum master, and product owner.
+          </p>
+          <ul>
+            <li>Full stack engineer with over 11 years of experience architecting
+              enterprise applications for healthcare settings.</li>
+            <li>Node.js developer with over 6 years of experience building RESTful APIs with an
+              emphasis on quality, security, and interoperability.</li>
+            <li>Leader with nearly 4 years of experience supervising agile development teams
+              responsible for supporting and enhancing:
+              <ul>
+                <li>Cloud Native Solutions</li>
+                <li>RESTful API Gateway</li>
+                <li>Development Tools</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
         <table className="bp4-html-table ">
           <thead>
             <tr>
-              <th>Project</th>
-              <th>Description</th>
-              <th>Technologies</th>
-              <th>Contributors</th>
+              <th>Certificate</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Blueprint</td>
-              <td>CSS framework and UI toolkit</td>
-              <td>Sass, TypeScript, React</td>
-              <td>268</td>
-            </tr>
-            <tr>
-              <td>TSLint</td>
-              <td>Static analysis linter for TypeScript</td>
-              <td>TypeScript</td>
-              <td>403</td>
-            </tr>
-            <tr>
-              <td>Plottable</td>
-              <td>Composable charting library built on top of D3</td>
-              <td>SVG, TypeScript, D3</td>
-              <td>737</td>
+              <td>Professional Cloud Developer<br />Google Cloud<br /><br />Issued Feb 2021<br />Expires Feb 2023</td>
+              <td><a href="https://www.credential.net/f06c9d63-a73d-46ad-8d31-67a31bc52402"><img src={gcpCloudDev} alt="gcp" height={150} /></a></td>
             </tr>
           </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan={3}>Total</td>
-              <td>1408</td>
-            </tr>
-          </tfoot>
-        </table>
-        <table className="bp4-html-table ">
-          <thead>
-            <tr>
-              <th>Project</th>
-              <th>Description</th>
-              <th>Technologies</th>
-              <th>Contributors</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Blueprint</td>
-              <td>CSS framework and UI toolkit</td>
-              <td>Sass, TypeScript, React</td>
-              <td>268</td>
-            </tr>
-            <tr>
-              <td>TSLint</td>
-              <td>Static analysis linter for TypeScript</td>
-              <td>TypeScript</td>
-              <td>403</td>
-            </tr>
-            <tr>
-              <td>Plottable</td>
-              <td>Composable charting library built on top of D3</td>
-              <td>SVG, TypeScript, D3</td>
-              <td>737</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan={3}>Total</td>
-              <td>1408</td>
-            </tr>
-          </tfoot>
-        </table>
-        <table className="bp4-html-table ">
-          <thead>
-            <tr>
-              <th>Project</th>
-              <th>Description</th>
-              <th>Technologies</th>
-              <th>Contributors</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Blueprint</td>
-              <td>CSS framework and UI toolkit</td>
-              <td>Sass, TypeScript, React</td>
-              <td>268</td>
-            </tr>
-            <tr>
-              <td>TSLint</td>
-              <td>Static analysis linter for TypeScript</td>
-              <td>TypeScript</td>
-              <td>403</td>
-            </tr>
-            <tr>
-              <td>Plottable</td>
-              <td>Composable charting library built on top of D3</td>
-              <td>SVG, TypeScript, D3</td>
-              <td>737</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan={3}>Total</td>
-              <td>1408</td>
-            </tr>
-          </tfoot>
-        </table>
-        <table className="bp4-html-table ">
-          <thead>
-            <tr>
-              <th>Project</th>
-              <th>Description</th>
-              <th>Technologies</th>
-              <th>Contributors</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Blueprint</td>
-              <td>CSS framework and UI toolkit</td>
-              <td>Sass, TypeScript, React</td>
-              <td>268</td>
-            </tr>
-            <tr>
-              <td>TSLint</td>
-              <td>Static analysis linter for TypeScript</td>
-              <td>TypeScript</td>
-              <td>403</td>
-            </tr>
-            <tr>
-              <td>Plottable</td>
-              <td>Composable charting library built on top of D3</td>
-              <td>SVG, TypeScript, D3</td>
-              <td>737</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan={3}>Total</td>
-              <td>1408</td>
-            </tr>
-          </tfoot>
-        </table>
-        <table className="bp4-html-table ">
-          <thead>
-            <tr>
-              <th>Project</th>
-              <th>Description</th>
-              <th>Technologies</th>
-              <th>Contributors</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Blueprint</td>
-              <td>CSS framework and UI toolkit</td>
-              <td>Sass, TypeScript, React</td>
-              <td>268</td>
-            </tr>
-            <tr>
-              <td>TSLint</td>
-              <td>Static analysis linter for TypeScript</td>
-              <td>TypeScript</td>
-              <td>403</td>
-            </tr>
-            <tr>
-              <td>Plottable</td>
-              <td>Composable charting library built on top of D3</td>
-              <td>SVG, TypeScript, D3</td>
-              <td>737</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan={3}>Total</td>
-              <td>1408</td>
-            </tr>
-          </tfoot>
-        </table>
-        <table className="bp4-html-table ">
-          <thead>
-            <tr>
-              <th>Project</th>
-              <th>Description</th>
-              <th>Technologies</th>
-              <th>Contributors</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Blueprint</td>
-              <td>CSS framework and UI toolkit</td>
-              <td>Sass, TypeScript, React</td>
-              <td>268</td>
-            </tr>
-            <tr>
-              <td>TSLint</td>
-              <td>Static analysis linter for TypeScript</td>
-              <td>TypeScript</td>
-              <td>403</td>
-            </tr>
-            <tr>
-              <td>Plottable</td>
-              <td>Composable charting library built on top of D3</td>
-              <td>SVG, TypeScript, D3</td>
-              <td>737</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colSpan={3}>Total</td>
-              <td>1408</td>
-            </tr>
-          </tfoot>
         </table>
       </Card>
 
     </main >
-  )
-}
-
-export const BodyOLD = () => {
-  return (
-    <main className='Body'>
-
-      <div className="App-header">
-        {mySkill({ header: 'TypeScript', content: 'Really good at it!' })}
-        {mySkill({ header: 'TypeScript', content: 'Really good at it!' })}
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <br />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload!!!
-        </p>
-        {/* https://www.linkedin.com/in/marco-ramos-dev
-        https://github.com/mramos-dev */}
-      </div>
-    </main>
   )
 }
