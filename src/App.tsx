@@ -3,23 +3,25 @@ import type { State } from './interfaces';
 
 import './App.css';
 import { Component } from 'react'
-import { Header, Body, Footer } from './components';
+import { About, Header, Body, Footer } from './components';
 import { getTheme, setTheme, isDarkTheme } from './utilities';
 
 import { IResizeEntry, ResizeSensor } from "@blueprintjs/core";
 
 export default class App extends Component {
-  public state: State = { themeName: getTheme(), viewport: { height: 0, width: 0 }, menuOpen: false };
+  public state: State = { themeName: getTheme(), viewport: { height: 0, width: 0 }, menuOpen: false, aboutOpen: false };
 
   render() {
     return (
       <ResizeSensor onResize={this.handleResize}>
         <div className={`${this.state.themeName} Viewport`}>
           <div className={isDarkTheme(this.state.themeName) ? 'DarkBackground' : 'LightBackground'} />
+          <About state={this.state} onToggleAbout={this.handleToggleAbout} />
           <Header
             useDarkTheme={isDarkTheme(this.state.themeName)}
             onToggleDark={this.handleToggleDark}
             onToggleMenu={this.handleToggleMenu}
+            onToggleAbout={this.handleToggleAbout}
             state={this.state}
           />
           <Body />
@@ -41,7 +43,11 @@ export default class App extends Component {
     this.setState({ themeName: nextThemeName });
   };
 
-  private handleToggleMenu = (openMenu: boolean) => {
-    this.setState({ menuOpen: openMenu });
+  private handleToggleMenu = (open: boolean) => {
+    this.setState({ menuOpen: open });
+  };
+
+  private handleToggleAbout = (open: boolean) => {
+    this.setState({ aboutOpen: open });
   };
 }

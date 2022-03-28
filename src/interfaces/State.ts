@@ -5,4 +5,5 @@ export interface State {
         width: number;
     };
     menuOpen: boolean;
+    aboutOpen: boolean;
 }

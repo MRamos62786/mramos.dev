@@ -3,10 +3,11 @@ import type { State } from '../interfaces';
 import { Navbar, Alignment, Button, AnchorButton, Menu, MenuItem, MenuDivider } from "@blueprintjs/core";
 import { Popover2 } from "@blueprintjs/popover2";
 
-export const Header = ({ useDarkTheme, onToggleDark, onToggleMenu, state }: {
+export const Header = ({ useDarkTheme, onToggleDark, onToggleMenu, onToggleAbout, state }: {
     useDarkTheme: boolean,
     onToggleDark: (useDark: boolean) => void,
-    onToggleMenu: (openMenu: boolean) => void,
+    onToggleMenu: (open: boolean) => void,
+    onToggleAbout: (open: boolean) => void,
     state: State
 },) => {
     return (
@@ -53,6 +54,11 @@ export const Header = ({ useDarkTheme, onToggleDark, onToggleMenu, state }: {
                                     icon={useDarkTheme ? "flash" : "moon"}
                                     text={useDarkTheme ? "Light theme" : "Dark theme"}
                                     onClick={() => onToggleDark(!useDarkTheme)}
+                                />
+                                <MenuItem
+                                    icon="application"
+                                    text="About"
+                                    onClick={() => onToggleAbout(true)}
                                 />
                             </Menu>
                         }
