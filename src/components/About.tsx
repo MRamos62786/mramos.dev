@@ -4,7 +4,7 @@ import { Button, Classes, Dialog } from "@blueprintjs/core";
 
 export const About = ({ state, onToggleAbout }: { state: State; onToggleAbout: (open: boolean) => void }) => {
     return (
-        <Dialog isOpen={state.aboutOpen} onClose={() => onToggleAbout(false)}>
+        <Dialog className={state.themeName} isOpen={state.aboutOpen} onClose={() => onToggleAbout(false)}>
             <div className={Classes.DIALOG_HEADER}>
                 <h2>About this site.</h2>
             </div>
