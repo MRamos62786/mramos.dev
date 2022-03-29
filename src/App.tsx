@@ -9,7 +9,16 @@ import { getTheme, setTheme, isDarkTheme } from './utilities';
 import { IResizeEntry, ResizeSensor } from "@blueprintjs/core";
 
 export default class App extends Component {
-  public state: State = { themeName: getTheme(), viewport: { height: 0, width: 0 }, menuOpen: false, aboutOpen: false };
+  public state: State = {
+    contact: {
+      phone: '+1-774-319-9111',
+      email: 'email@mramos.dev'
+    },
+    themeName: getTheme(),
+    viewport: { height: 0, width: 0 },
+    menuOpen: false,
+    aboutOpen: false
+  };
 
   render() {
     return (

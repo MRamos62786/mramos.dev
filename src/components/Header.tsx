@@ -10,6 +10,7 @@ export const Header = ({ useDarkTheme, onToggleDark, onToggleMenu, onToggleAbout
     onToggleAbout: (open: boolean) => void,
     state: State
 },) => {
+
     return (
         <header>
             <Navbar>
@@ -28,27 +29,31 @@ export const Header = ({ useDarkTheme, onToggleDark, onToggleMenu, onToggleAbout
                     {state.viewport.width >= 430 && <AnchorButton
                         className="bp4-minimal"
                         icon="phone"
-                        text={state.viewport.width > 768 ? "(774) 319-9111" : null}
-                        href="tel:+1 7743199111" />}
+                        text={state.viewport.width > 768 ? state.contact.phone : null}
+                        href={`tel:${state.contact.phone}`} />}
                     {state.viewport.width >= 430 && <AnchorButton
                         className="bp4-minimal"
                         icon="envelope"
                         text={state.viewport.width > 768 ? "email@mramos.dev" : null}
-                        href="mailto: email@mramos.dev" />}
+                        href="mailto:email@mramos.dev" />}
                     <Popover2
                         content={
                             <Menu>
                                 {state.viewport.width < 370 && <MenuItem icon="home" text="Home" />}
-                                {state.viewport.width < 370 && <MenuItem icon="document" text="Resume" />}
+                                {state.viewport.width < 370 && <MenuItem
+                                    icon="document"
+                                    text="Resume"
+                                    href="resume.pdf"
+                                    download />}
                                 {state.viewport.width < 370 && <MenuDivider />}
                                 {state.viewport.width < 430 && <MenuItem
                                     icon="phone"
-                                    text="(774) 319-9111"
-                                    href="tel:+1 7743199111" />}
+                                    text={state.contact.phone}
+                                    href={`tel:${state.contact.phone}`} />}
                                 {state.viewport.width < 430 && <MenuItem
                                     icon="envelope"
                                     text="email@mramos.dev"
-                                    href="mailto: email@mramos.dev" />}
+                                    href="mailto:email@mramos.dev" />}
                                 {state.viewport.width < 430 && <MenuDivider />}
                                 <MenuItem
                                     icon={useDarkTheme ? "flash" : "moon"}
