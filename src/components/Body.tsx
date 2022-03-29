@@ -11,8 +11,8 @@ export const Body = () => {
           <h3>Lifelong Learner with Passion & Integrity</h3>
           <p>
             I'm a passionate software engineer with professional integrity who
-            is always looking for opportunities to advance his career. I'm also a
-            lifelong learner, expert in Node.js and RESTful APIs, and has been
+            is always looking for opportunities to advance my career. I'm also a
+            lifelong learner, expert in Node.js and RESTful APIs, and have been
             part of many successful agile development teams in many roles
             including individual contributor, scrum master, and product owner.
           </p>
