@@ -30,3 +30,14 @@
   background-color: #404854;
   z-index: -100;
 }
+
+.Dialog {
+  width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+  .Dialog {
+    width: auto;
+  }
+  
+}

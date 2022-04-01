@@ -8,7 +8,7 @@ export const Footer = ({ state }: { state: State }) => {
         <footer >
             <Navbar >
                 <Navbar.Group align={Alignment.LEFT}>
-                    <Navbar.Heading>Support Ukraine 🇺🇦</Navbar.Heading>
+                    <Navbar.Heading>Do Great Things!</Navbar.Heading>
                 </Navbar.Group>
                 <Navbar.Group align={Alignment.RIGHT}>
                     <AnchorButton
