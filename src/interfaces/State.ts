@@ -16,7 +16,12 @@ export interface State {
     // http://worldtimeapi.org/
     time: Time | null;
     noTime: boolean;
+    availability: {
+        from: Date;
+        to: Date;
+    }[];
 }
+
 
 export interface Time {
     abbreviation: string;

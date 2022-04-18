@@ -18,8 +18,8 @@ export const Header = ({ useDarkTheme, onToggleDark, onToggleMenu, onToggleAbout
                 <Navbar.Group align={Alignment.LEFT}>
                     <Navbar.Heading>Marco Ramos</Navbar.Heading>
                     <Navbar.Divider />
-                    {/* {state.viewport.width >= 410 && <Button className="bp4-minimal" icon="home" text="Home" />} */}
-                    {state.viewport.width >= 410 && <Button className="bp4-minimal" icon="calendar" text="Availability" onClick={() => onToggleAvailability(true)} />}
+                    {state.viewport.width >= 410 && <Button className="bp4-minimal" icon="home" text="Home" />}
+                    {/* {state.viewport.width >= 410 && <Button className="bp4-minimal" icon="calendar" text="Availability" onClick={() => onToggleAvailability(true)} />} */}
                     {state.viewport.width >= 410 && <AnchorButton
                         className="bp4-minimal"
                         icon="document"
@@ -41,8 +41,8 @@ export const Header = ({ useDarkTheme, onToggleDark, onToggleMenu, onToggleAbout
                     <Popover2
                         content={
                             <Menu>
-                                {/* {state.viewport.width < 410 && <MenuItem icon="home" text="Home" />} */}
-                                {state.viewport.width < 410 && <MenuItem icon="calendar" text="Availability" onClick={() => onToggleAvailability(true)}/>}
+                                {state.viewport.width < 410 && <MenuItem icon="home" text="Home" />}
+                                {/* {state.viewport.width < 410 && <MenuItem icon="calendar" text="Availability" onClick={() => onToggleAvailability(true)}/>} */}
                                 {state.viewport.width < 410 && <MenuItem
                                     icon="document"
                                     text="Resume"

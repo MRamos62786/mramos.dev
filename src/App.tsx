@@ -22,7 +22,13 @@ export default class App extends Component {
     aboutOpen: false,
     availabilityOpen: false,
     time: null,
-    noTime: true
+    noTime: true,
+    availability: [
+      {
+        from: new Date('2022-04-07T17:00:00-04:00'),
+        to: new Date('2022-04-07T18:30:00-04:00')
+      }
+    ]
   };
 
   async componentDidMount() {
