@@ -16,7 +16,7 @@ export const Footer = ({ state }: { state: State }) => {
                         href="https://www.linkedin.com/in/marco-ramos-dev"
                         text={
                             <span>
-                                <img src={linkedInLogo} alt="linkedin" height={20} /> {state.viewport.width >= 475 && "mramos-ramos-dev"}
+                                <img src={linkedInLogo} alt="linkedin" height={20} /> {state.viewport.width >= 475 && "marco-ramos-dev"}
                             </span>} />
                     <AnchorButton
                         className="bp4-minimal"
