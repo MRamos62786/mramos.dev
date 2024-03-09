@@ -31,7 +31,7 @@ export const Body = () => {
             </li>
           </ul>
         </div>
-        <table className="bp4-html-table ">
+{/*         <table className="bp4-html-table ">
           <thead>
             <tr>
               <th>Certificate</th>
@@ -44,7 +44,7 @@ export const Body = () => {
               <td><a href="https://www.credential.net/f06c9d63-a73d-46ad-8d31-67a31bc52402"><img src={gcpCloudDev} alt="gcp" height={150} /></a></td>
             </tr>
           </tbody>
-        </table>
+        </table> */}
       </Card>
 
     </main >
