@@ -1,5 +1,5 @@
 import './Body.css';
-import gcpCloudDev from '../img/gcp-cloud-dev.png'
+// import gcpCloudDev from '../img/gcp-cloud-dev.png'
 
 import { Card, Elevation } from "@blueprintjs/core";
 
